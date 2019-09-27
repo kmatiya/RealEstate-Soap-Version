@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="81e2f7c21e9b4a1fb4bc5c3eeee13e3c" Name="Diagram1">
+        <EntityTypeShape EntityType="FindAHouseModel.ClientState" Width="1.5" PointX="13.25" PointY="14.875" />
+        <EntityTypeShape EntityType="FindAHouseModel.District" Width="1.5" PointX="2.75" PointY="9.5" />
+        <EntityTypeShape EntityType="FindAHouseModel.DurationType" Width="1.5" PointX="2.75" PointY="3.5" />
+        <EntityTypeShape EntityType="FindAHouseModel.FenceType" Width="1.5" PointX="2.75" PointY="6.625" />
+        <EntityTypeShape EntityType="FindAHouseModel.FieldState" Width="1.5" PointX="0.5" PointY="5.25" />
+        <EntityTypeShape EntityType="FindAHouseModel.HouseBooking" Width="1.5" PointX="12.5" PointY="1.25" />
+        <EntityTypeShape EntityType="FindAHouseModel.HouseContactDetail" Width="1.5" PointX="12.5" PointY="5.25" />
+        <EntityTypeShape EntityType="FindAHouseModel.HouseFavourite" Width="1.5" PointX="12.5" PointY="11.625" />
+        <EntityTypeShape EntityType="FindAHouseModel.HouseOwner" Width="1.5" PointX="12.5" PointY="8.75" />
+        <EntityTypeShape EntityType="FindAHouseModel.House" Width="1.5" PointX="10.25" PointY="3.125" />
+        <EntityTypeShape EntityType="FindAHouseModel.HouseState" Width="1.5" PointX="2.75" PointY="0.5" />
+        <EntityTypeShape EntityType="FindAHouseModel.HouseUrl" Width="1.5" PointX="15.5" PointY="5.5" />
+        <EntityTypeShape EntityType="FindAHouseModel.InterestedClient" Width="1.5" PointX="15.5" PointY="9.375" />
+        <EntityTypeShape EntityType="FindAHouseModel.LocationsInDistrict" Width="1.5" PointX="5" PointY="9.25" />
+        <EntityTypeShape EntityType="FindAHouseModel.LoginSession" Width="1.5" PointX="9.5" PointY="17.875" />
+        <EntityTypeShape EntityType="FindAHouseModel.PaymentMode" Width="1.5" PointX="8" PointY="5.5" />
+        <EntityTypeShape EntityType="FindAHouseModel.SubscriptionType" Width="1.5" PointX="5" PointY="5.25" />
+        <EntityTypeShape EntityType="FindAHouseModel.UserPhoneNumber" Width="1.5" PointX="9.5" PointY="10.75" />
+        <EntityTypeShape EntityType="FindAHouseModel.UserRole" Width="1.5" PointX="2.75" PointY="12.625" />
+        <EntityTypeShape EntityType="FindAHouseModel.User" Width="1.5" PointX="7.25" PointY="9.5" />
+        <EntityTypeShape EntityType="FindAHouseModel.UserSubscription" Width="1.5" PointX="15.5" PointY="13.375" />
+        <AssociationConnector Association="FindAHouseModel.FK_InterestedClients_ClientStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_Districts_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_Houses_Districts" />
+        <AssociationConnector Association="FindAHouseModel.FK_LocationsInDistricts_Districts" />
+        <AssociationConnector Association="FindAHouseModel.FK_DurationTypes_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_ModeOfPayment_DurationTypes" />
+        <AssociationConnector Association="FindAHouseModel.FK_subscriptionTypes_DurationTypes" />
+        <AssociationConnector Association="FindAHouseModel.FK_FenceTypes_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_Houses_FenceTypes" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseBookings_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseContactDetails_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseFavourites_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_Houses_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseStates_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseUrls_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_InterestedClients_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_LocationsInDistricts_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_ModeOfPayment_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_subscriptionTypes_subscriptionTypes" />
+        <AssociationConnector Association="FindAHouseModel.FK_UserPhoneNumbers_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_userRoles_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_Users_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_UserSubscriptions_FieldStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseBookings_Houses" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseBookings_Users" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseContactDetails_Houses" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseFavourites_Houses" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseFavourites_Users" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseOwners_Houses" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseOwners_Users" />
+        <AssociationConnector Association="FindAHouseModel.FK_Houses_HouseStates" />
+        <AssociationConnector Association="FindAHouseModel.FK_Houses_LocationsInDistricts" />
+        <AssociationConnector Association="FindAHouseModel.FK_Houses_paymentModes" />
+        <AssociationConnector Association="FindAHouseModel.FK_HouseUrls_HouseUrls" />
+        <AssociationConnector Association="FindAHouseModel.FK_InterestedClients_Houses" />
+        <AssociationConnector Association="FindAHouseModel.FK_InterestedClients_Users" />
+        <AssociationConnector Association="FindAHouseModel.FK_LoginSessions_Users" />
+        <AssociationConnector Association="FindAHouseModel.FK_Users_subscriptionTypes" />
+        <AssociationConnector Association="FindAHouseModel.FK_UserSubscriptions_SubscriptionTypes" />
+        <AssociationConnector Association="FindAHouseModel.FK_UserPhoneNumbers_Users" />
+        <AssociationConnector Association="FindAHouseModel.FK_Users_userRoles" />
+        <AssociationConnector Association="FindAHouseModel.FK_UserSubscriptions_Users" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

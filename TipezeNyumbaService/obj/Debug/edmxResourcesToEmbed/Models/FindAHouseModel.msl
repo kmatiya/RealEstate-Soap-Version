@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FindAHouseModelStoreContainer" CdmEntityContainer="FindAHouseEntities">
+    <EntitySetMapping Name="ClientStates">
+      <EntityTypeMapping TypeName="FindAHouseModel.ClientState">
+        <MappingFragment StoreEntitySet="ClientStates">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="clientStatus" ColumnName="clientStatus" />
+          <ScalarProperty Name="stateID" ColumnName="stateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Districts">
+      <EntityTypeMapping TypeName="FindAHouseModel.District">
+        <MappingFragment StoreEntitySet="Districts">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="districtID" ColumnName="districtID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DurationTypes">
+      <EntityTypeMapping TypeName="FindAHouseModel.DurationType">
+        <MappingFragment StoreEntitySet="DurationTypes">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="durationID" ColumnName="durationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FenceTypes">
+      <EntityTypeMapping TypeName="FindAHouseModel.FenceType">
+        <MappingFragment StoreEntitySet="FenceTypes">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="typeOfFence" ColumnName="typeOfFence" />
+          <ScalarProperty Name="fenceTypeID" ColumnName="fenceTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FieldStates">
+      <EntityTypeMapping TypeName="FindAHouseModel.FieldState">
+        <MappingFragment StoreEntitySet="FieldStates">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="fieldStateID" ColumnName="fieldStateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HouseBookings">
+      <EntityTypeMapping TypeName="FindAHouseModel.HouseBooking">
+        <MappingFragment StoreEntitySet="HouseBookings">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="timeTo" ColumnName="timeTo" />
+          <ScalarProperty Name="timeFrom" ColumnName="timeFrom" />
+          <ScalarProperty Name="dateOfMeeting" ColumnName="dateOfMeeting" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="houseID" ColumnName="houseID" />
+          <ScalarProperty Name="houseBookID" ColumnName="houseBookID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HouseContactDetails">
+      <EntityTypeMapping TypeName="FindAHouseModel.HouseContactDetail">
+        <MappingFragment StoreEntitySet="HouseContactDetails">
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="whatsAppContactNumber" ColumnName="whatsAppContactNumber" />
+          <ScalarProperty Name="phoneNumber2" ColumnName="phoneNumber2" />
+          <ScalarProperty Name="phoneNumber1" ColumnName="phoneNumber1" />
+          <ScalarProperty Name="houseID" ColumnName="houseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HouseFavourites">
+      <EntityTypeMapping TypeName="FindAHouseModel.HouseFavourite">
+        <MappingFragment StoreEntitySet="HouseFavourites">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="houseID" ColumnName="houseID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="houseFavouriteID" ColumnName="houseFavouriteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HouseOwners">
+      <EntityTypeMapping TypeName="FindAHouseModel.HouseOwner">
+        <MappingFragment StoreEntitySet="HouseOwners">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="houseID" ColumnName="houseID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="houseOwnerID" ColumnName="houseOwnerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Houses">
+      <EntityTypeMapping TypeName="FindAHouseModel.House">
+        <MappingFragment StoreEntitySet="Houses">
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="currentHouseState" ColumnName="currentHouseState" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="dateUploaded" ColumnName="dateUploaded" />
+          <ScalarProperty Name="modeOfPayment" ColumnName="modeOfPayment" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="dateHouseWillBeAvailable" ColumnName="dateHouseWillBeAvailable" />
+          <ScalarProperty Name="fenceType" ColumnName="fenceType" />
+          <ScalarProperty Name="numberOfGarages" ColumnName="numberOfGarages" />
+          <ScalarProperty Name="selfContained" ColumnName="selfContained" />
+          <ScalarProperty Name="masterBedroomEnsuite" ColumnName="masterBedroomEnsuite" />
+          <ScalarProperty Name="bedrooms" ColumnName="bedrooms" />
+          <ScalarProperty Name="locationWithInDistrict" ColumnName="locationWithInDistrict" />
+          <ScalarProperty Name="districtHouseIsLocated" ColumnName="districtHouseIsLocated" />
+          <ScalarProperty Name="houseID" ColumnName="houseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HouseStates">
+      <EntityTypeMapping TypeName="FindAHouseModel.HouseState">
+        <MappingFragment StoreEntitySet="HouseStates">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="HouseStatus" ColumnName="HouseStatus" />
+          <ScalarProperty Name="houseStateID" ColumnName="houseStateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HouseUrls">
+      <EntityTypeMapping TypeName="FindAHouseModel.HouseUrl">
+        <MappingFragment StoreEntitySet="HouseUrls">
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="imageUrl" ColumnName="imageUrl" />
+          <ScalarProperty Name="houseID" ColumnName="houseID" />
+          <ScalarProperty Name="houseUrlID" ColumnName="houseUrlID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InterestedClients">
+      <EntityTypeMapping TypeName="FindAHouseModel.InterestedClient">
+        <MappingFragment StoreEntitySet="InterestedClients">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="interestedClientState" ColumnName="interestedClientState" />
+          <ScalarProperty Name="houseID" ColumnName="houseID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="interestedClientID" ColumnName="interestedClientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocationsInDistricts">
+      <EntityTypeMapping TypeName="FindAHouseModel.LocationsInDistrict">
+        <MappingFragment StoreEntitySet="LocationsInDistricts">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="districtID" ColumnName="districtID" />
+          <ScalarProperty Name="districtLocationID" ColumnName="districtLocationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginSessions">
+      <EntityTypeMapping TypeName="FindAHouseModel.LoginSession">
+        <MappingFragment StoreEntitySet="LoginSessions">
+          <ScalarProperty Name="DateAndTime" ColumnName="DateAndTime" />
+          <ScalarProperty Name="SessionToken" ColumnName="SessionToken" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="loginSessionID" ColumnName="loginSessionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentModes">
+      <EntityTypeMapping TypeName="FindAHouseModel.PaymentMode">
+        <MappingFragment StoreEntitySet="PaymentModes">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="modeOfPaymentID" ColumnName="modeOfPaymentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubscriptionTypes">
+      <EntityTypeMapping TypeName="FindAHouseModel.SubscriptionType">
+        <MappingFragment StoreEntitySet="SubscriptionTypes">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="durationNumber" ColumnName="durationNumber" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="subscriptionID" ColumnName="subscriptionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserPhoneNumbers">
+      <EntityTypeMapping TypeName="FindAHouseModel.UserPhoneNumber">
+        <MappingFragment StoreEntitySet="UserPhoneNumbers">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="userPhoneNumberID" ColumnName="userPhoneNumberID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="FindAHouseModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="userRoleID" ColumnName="userRoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="FindAHouseModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="accountState" ColumnName="accountState" />
+          <ScalarProperty Name="passwordSalt" ColumnName="passwordSalt" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="userSubscriptionType" ColumnName="userSubscriptionType" />
+          <ScalarProperty Name="userType" ColumnName="userType" />
+          <ScalarProperty Name="dateTimeCreated" ColumnName="dateTimeCreated" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSubscriptions">
+      <EntityTypeMapping TypeName="FindAHouseModel.UserSubscription">
+        <MappingFragment StoreEntitySet="UserSubscriptions">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="subcriptionType" ColumnName="subcriptionType" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="userSubscriptionID" ColumnName="userSubscriptionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

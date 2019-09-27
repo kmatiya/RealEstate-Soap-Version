@@ -1,0 +1,19 @@
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\TipezeNyumbaWCF.dll.config
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\TipezeNyumbaWCF.dll
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\TipezeNyumbaWCF.pdb
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\EntityFramework.dll
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\Generic Repository and Unit of Work.dll
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\Microsoft.Practices.Unity.Mvc.dll
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\System.Web.Mvc.dll
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\Generic Repository and Unit of Work.pdb
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\Generic Repository and Unit of Work.dll.config
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\EntityFramework.xml
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\Microsoft.Practices.Unity.Mvc.xml
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\bin\Debug\System.Web.Mvc.xml
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\obj\Debug\TipezeNyumbaWCF.csprojResolveAssemblyReference.cache
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\obj\Debug\TipezeNyumbaWCF.dll
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleApplication\TipezeNyumbaWCF\obj\Debug\TipezeNyumbaWCF.pdb

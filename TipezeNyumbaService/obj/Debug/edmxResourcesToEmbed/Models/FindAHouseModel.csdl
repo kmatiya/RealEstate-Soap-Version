@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FindAHouseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="FindAHouseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClientStates" EntityType="FindAHouseModel.ClientState" />
+    <EntitySet Name="Districts" EntityType="FindAHouseModel.District" />
+    <EntitySet Name="DurationTypes" EntityType="FindAHouseModel.DurationType" />
+    <EntitySet Name="FenceTypes" EntityType="FindAHouseModel.FenceType" />
+    <EntitySet Name="FieldStates" EntityType="FindAHouseModel.FieldState" />
+    <EntitySet Name="HouseBookings" EntityType="FindAHouseModel.HouseBooking" />
+    <EntitySet Name="HouseContactDetails" EntityType="FindAHouseModel.HouseContactDetail" />
+    <EntitySet Name="HouseFavourites" EntityType="FindAHouseModel.HouseFavourite" />
+    <EntitySet Name="HouseOwners" EntityType="FindAHouseModel.HouseOwner" />
+    <EntitySet Name="Houses" EntityType="FindAHouseModel.House" />
+    <EntitySet Name="HouseStates" EntityType="FindAHouseModel.HouseState" />
+    <EntitySet Name="HouseUrls" EntityType="FindAHouseModel.HouseUrl" />
+    <EntitySet Name="InterestedClients" EntityType="FindAHouseModel.InterestedClient" />
+    <EntitySet Name="LocationsInDistricts" EntityType="FindAHouseModel.LocationsInDistrict" />
+    <EntitySet Name="LoginSessions" EntityType="FindAHouseModel.LoginSession" />
+    <EntitySet Name="PaymentModes" EntityType="FindAHouseModel.PaymentMode" />
+    <EntitySet Name="SubscriptionTypes" EntityType="FindAHouseModel.SubscriptionType" />
+    <EntitySet Name="UserPhoneNumbers" EntityType="FindAHouseModel.UserPhoneNumber" />
+    <EntitySet Name="UserRoles" EntityType="FindAHouseModel.UserRole" />
+    <EntitySet Name="Users" EntityType="FindAHouseModel.User" />
+    <EntitySet Name="UserSubscriptions" EntityType="FindAHouseModel.UserSubscription" />
+    <AssociationSet Name="FK_InterestedClients_ClientStates" Association="FindAHouseModel.FK_InterestedClients_ClientStates">
+      <End Role="ClientState" EntitySet="ClientStates" />
+      <End Role="InterestedClient" EntitySet="InterestedClients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Districts_FieldStates" Association="FindAHouseModel.FK_Districts_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="District" EntitySet="Districts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Houses_Districts" Association="FindAHouseModel.FK_Houses_Districts">
+      <End Role="District" EntitySet="Districts" />
+      <End Role="House" EntitySet="Houses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LocationsInDistricts_Districts" Association="FindAHouseModel.FK_LocationsInDistricts_Districts">
+      <End Role="District" EntitySet="Districts" />
+      <End Role="LocationsInDistrict" EntitySet="LocationsInDistricts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DurationTypes_FieldStates" Association="FindAHouseModel.FK_DurationTypes_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="DurationType" EntitySet="DurationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModeOfPayment_DurationTypes" Association="FindAHouseModel.FK_ModeOfPayment_DurationTypes">
+      <End Role="DurationType" EntitySet="DurationTypes" />
+      <End Role="PaymentMode" EntitySet="PaymentModes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_subscriptionTypes_DurationTypes" Association="FindAHouseModel.FK_subscriptionTypes_DurationTypes">
+      <End Role="DurationType" EntitySet="DurationTypes" />
+      <End Role="SubscriptionType" EntitySet="SubscriptionTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FenceTypes_FieldStates" Association="FindAHouseModel.FK_FenceTypes_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="FenceType" EntitySet="FenceTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Houses_FenceTypes" Association="FindAHouseModel.FK_Houses_FenceTypes">
+      <End Role="FenceType" EntitySet="FenceTypes" />
+      <End Role="House" EntitySet="Houses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseBookings_FieldStates" Association="FindAHouseModel.FK_HouseBookings_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="HouseBooking" EntitySet="HouseBookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseContactDetails_FieldStates" Association="FindAHouseModel.FK_HouseContactDetails_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="HouseContactDetail" EntitySet="HouseContactDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseFavourites_FieldStates" Association="FindAHouseModel.FK_HouseFavourites_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="HouseFavourite" EntitySet="HouseFavourites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Houses_FieldStates" Association="FindAHouseModel.FK_Houses_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="House" EntitySet="Houses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseStates_FieldStates" Association="FindAHouseModel.FK_HouseStates_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="HouseState" EntitySet="HouseStates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseUrls_FieldStates" Association="FindAHouseModel.FK_HouseUrls_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="HouseUrl" EntitySet="HouseUrls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InterestedClients_FieldStates" Association="FindAHouseModel.FK_InterestedClients_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="InterestedClient" EntitySet="InterestedClients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LocationsInDistricts_FieldStates" Association="FindAHouseModel.FK_LocationsInDistricts_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="LocationsInDistrict" EntitySet="LocationsInDistricts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModeOfPayment_FieldStates" Association="FindAHouseModel.FK_ModeOfPayment_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="PaymentMode" EntitySet="PaymentModes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_subscriptionTypes_subscriptionTypes" Association="FindAHouseModel.FK_subscriptionTypes_subscriptionTypes">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="SubscriptionType" EntitySet="SubscriptionTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPhoneNumbers_FieldStates" Association="FindAHouseModel.FK_UserPhoneNumbers_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="UserPhoneNumber" EntitySet="UserPhoneNumbers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_userRoles_FieldStates" Association="FindAHouseModel.FK_userRoles_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="UserRole" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_FieldStates" Association="FindAHouseModel.FK_Users_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSubscriptions_FieldStates" Association="FindAHouseModel.FK_UserSubscriptions_FieldStates">
+      <End Role="FieldState" EntitySet="FieldStates" />
+      <End Role="UserSubscription" EntitySet="UserSubscriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseBookings_Houses" Association="FindAHouseModel.FK_HouseBookings_Houses">
+      <End Role="House" EntitySet="Houses" />
+      <End Role="HouseBooking" EntitySet="HouseBookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseBookings_Users" Association="FindAHouseModel.FK_HouseBookings_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="HouseBooking" EntitySet="HouseBookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseContactDetails_Houses" Association="FindAHouseModel.FK_HouseContactDetails_Houses">
+      <End Role="House" EntitySet="Houses" />
+      <End Role="HouseContactDetail" EntitySet="HouseContactDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseFavourites_Houses" Association="FindAHouseModel.FK_HouseFavourites_Houses">
+      <End Role="House" EntitySet="Houses" />
+      <End Role="HouseFavourite" EntitySet="HouseFavourites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseFavourites_Users" Association="FindAHouseModel.FK_HouseFavourites_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="HouseFavourite" EntitySet="HouseFavourites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseOwners_Houses" Association="FindAHouseModel.FK_HouseOwners_Houses">
+      <End Role="House" EntitySet="Houses" />
+      <End Role="HouseOwner" EntitySet="HouseOwners" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseOwners_Users" Association="FindAHouseModel.FK_HouseOwners_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="HouseOwner" EntitySet="HouseOwners" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Houses_HouseStates" Association="FindAHouseModel.FK_Houses_HouseStates">
+      <End Role="HouseState" EntitySet="HouseStates" />
+      <End Role="House" EntitySet="Houses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Houses_LocationsInDistricts" Association="FindAHouseModel.FK_Houses_LocationsInDistricts">
+      <End Role="LocationsInDistrict" EntitySet="LocationsInDistricts" />
+      <End Role="House" EntitySet="Houses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Houses_paymentModes" Association="FindAHouseModel.FK_Houses_paymentModes">
+      <End Role="PaymentMode" EntitySet="PaymentModes" />
+      <End Role="House" EntitySet="Houses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseUrls_HouseUrls" Association="FindAHouseModel.FK_HouseUrls_HouseUrls">
+      <End Role="House" EntitySet="Houses" />
+      <End Role="HouseUrl" EntitySet="HouseUrls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InterestedClients_Houses" Association="FindAHouseModel.FK_InterestedClients_Houses">
+      <End Role="House" EntitySet="Houses" />
+      <End Role="InterestedClient" EntitySet="InterestedClients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InterestedClients_Users" Association="FindAHouseModel.FK_InterestedClients_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="InterestedClient" EntitySet="InterestedClients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoginSessions_Users" Association="FindAHouseModel.FK_LoginSessions_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="LoginSession" EntitySet="LoginSessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_subscriptionTypes" Association="FindAHouseModel.FK_Users_subscriptionTypes">
+      <End Role="SubscriptionType" EntitySet="SubscriptionTypes" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSubscriptions_SubscriptionTypes" Association="FindAHouseModel.FK_UserSubscriptions_SubscriptionTypes">
+      <End Role="SubscriptionType" EntitySet="SubscriptionTypes" />
+      <End Role="UserSubscription" EntitySet="UserSubscriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPhoneNumbers_Users" Association="FindAHouseModel.FK_UserPhoneNumbers_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserPhoneNumber" EntitySet="UserPhoneNumbers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_userRoles" Association="FindAHouseModel.FK_Users_userRoles">
+      <End Role="UserRole" EntitySet="UserRoles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSubscriptions_Users" Association="FindAHouseModel.FK_UserSubscriptions_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserSubscription" EntitySet="UserSubscriptions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ClientState">
+    <Key>
+      <PropertyRef Name="stateID" />
+    </Key>
+    <Property Name="stateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clientStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="InterestedClients" Relationship="FindAHouseModel.FK_InterestedClients_ClientStates" FromRole="ClientState" ToRole="InterestedClient" />
+  </EntityType>
+  <EntityType Name="District">
+    <Key>
+      <PropertyRef Name="districtID" />
+    </Key>
+    <Property Name="districtID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_Districts_FieldStates" FromRole="District" ToRole="FieldState" />
+    <NavigationProperty Name="Houses" Relationship="FindAHouseModel.FK_Houses_Districts" FromRole="District" ToRole="House" />
+    <NavigationProperty Name="LocationsInDistricts" Relationship="FindAHouseModel.FK_LocationsInDistricts_Districts" FromRole="District" ToRole="LocationsInDistrict" />
+  </EntityType>
+  <EntityType Name="DurationType">
+    <Key>
+      <PropertyRef Name="durationID" />
+    </Key>
+    <Property Name="durationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_DurationTypes_FieldStates" FromRole="DurationType" ToRole="FieldState" />
+    <NavigationProperty Name="PaymentModes" Relationship="FindAHouseModel.FK_ModeOfPayment_DurationTypes" FromRole="DurationType" ToRole="PaymentMode" />
+    <NavigationProperty Name="SubscriptionTypes" Relationship="FindAHouseModel.FK_subscriptionTypes_DurationTypes" FromRole="DurationType" ToRole="SubscriptionType" />
+  </EntityType>
+  <EntityType Name="FenceType">
+    <Key>
+      <PropertyRef Name="fenceTypeID" />
+    </Key>
+    <Property Name="fenceTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="typeOfFence" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_FenceTypes_FieldStates" FromRole="FenceType" ToRole="FieldState" />
+    <NavigationProperty Name="Houses" Relationship="FindAHouseModel.FK_Houses_FenceTypes" FromRole="FenceType" ToRole="House" />
+  </EntityType>
+  <EntityType Name="FieldState">
+    <Key>
+      <PropertyRef Name="fieldStateID" />
+    </Key>
+    <Property Name="fieldStateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="state" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Districts" Relationship="FindAHouseModel.FK_Districts_FieldStates" FromRole="FieldState" ToRole="District" />
+    <NavigationProperty Name="DurationTypes" Relationship="FindAHouseModel.FK_DurationTypes_FieldStates" FromRole="FieldState" ToRole="DurationType" />
+    <NavigationProperty Name="FenceTypes" Relationship="FindAHouseModel.FK_FenceTypes_FieldStates" FromRole="FieldState" ToRole="FenceType" />
+    <NavigationProperty Name="HouseBookings" Relationship="FindAHouseModel.FK_HouseBookings_FieldStates" FromRole="FieldState" ToRole="HouseBooking" />
+    <NavigationProperty Name="HouseContactDetails" Relationship="FindAHouseModel.FK_HouseContactDetails_FieldStates" FromRole="FieldState" ToRole="HouseContactDetail" />
+    <NavigationProperty Name="HouseFavourites" Relationship="FindAHouseModel.FK_HouseFavourites_FieldStates" FromRole="FieldState" ToRole="HouseFavourite" />
+    <NavigationProperty Name="Houses" Relationship="FindAHouseModel.FK_Houses_FieldStates" FromRole="FieldState" ToRole="House" />
+    <NavigationProperty Name="HouseStates" Relationship="FindAHouseModel.FK_HouseStates_FieldStates" FromRole="FieldState" ToRole="HouseState" />
+    <NavigationProperty Name="HouseUrls" Relationship="FindAHouseModel.FK_HouseUrls_FieldStates" FromRole="FieldState" ToRole="HouseUrl" />
+    <NavigationProperty Name="InterestedClients" Relationship="FindAHouseModel.FK_InterestedClients_FieldStates" FromRole="FieldState" ToRole="InterestedClient" />
+    <NavigationProperty Name="LocationsInDistricts" Relationship="FindAHouseModel.FK_LocationsInDistricts_FieldStates" FromRole="FieldState" ToRole="LocationsInDistrict" />
+    <NavigationProperty Name="PaymentModes" Relationship="FindAHouseModel.FK_ModeOfPayment_FieldStates" FromRole="FieldState" ToRole="PaymentMode" />
+    <NavigationProperty Name="SubscriptionTypes" Relationship="FindAHouseModel.FK_subscriptionTypes_subscriptionTypes" FromRole="FieldState" ToRole="SubscriptionType" />
+    <NavigationProperty Name="UserPhoneNumbers" Relationship="FindAHouseModel.FK_UserPhoneNumbers_FieldStates" FromRole="FieldState" ToRole="UserPhoneNumber" />
+    <NavigationProperty Name="UserRoles" Relationship="FindAHouseModel.FK_userRoles_FieldStates" FromRole="FieldState" ToRole="UserRole" />
+    <NavigationProperty Name="Users" Relationship="FindAHouseModel.FK_Users_FieldStates" FromRole="FieldState" ToRole="User" />
+    <NavigationProperty Name="UserSubscriptions" Relationship="FindAHouseModel.FK_UserSubscriptions_FieldStates" FromRole="FieldState" ToRole="UserSubscription" />
+  </EntityType>
+  <EntityType Name="HouseBooking">
+    <Key>
+      <PropertyRef Name="houseBookID" />
+    </Key>
+    <Property Name="houseBookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="houseID" Type="Int32" Nullable="false" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="dateOfMeeting" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="timeFrom" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="timeTo" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_HouseBookings_FieldStates" FromRole="HouseBooking" ToRole="FieldState" />
+    <NavigationProperty Name="House" Relationship="FindAHouseModel.FK_HouseBookings_Houses" FromRole="HouseBooking" ToRole="House" />
+    <NavigationProperty Name="User" Relationship="FindAHouseModel.FK_HouseBookings_Users" FromRole="HouseBooking" ToRole="User" />
+  </EntityType>
+  <EntityType Name="HouseContactDetail">
+    <Key>
+      <PropertyRef Name="houseID" />
+    </Key>
+    <Property Name="houseID" Type="Int32" Nullable="false" />
+    <Property Name="phoneNumber1" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="phoneNumber2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="whatsAppContactNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_HouseContactDetails_FieldStates" FromRole="HouseContactDetail" ToRole="FieldState" />
+    <NavigationProperty Name="House" Relationship="FindAHouseModel.FK_HouseContactDetails_Houses" FromRole="HouseContactDetail" ToRole="House" />
+  </EntityType>
+  <EntityType Name="HouseFavourite">
+    <Key>
+      <PropertyRef Name="houseFavouriteID" />
+    </Key>
+    <Property Name="houseFavouriteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="houseID" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_HouseFavourites_FieldStates" FromRole="HouseFavourite" ToRole="FieldState" />
+    <NavigationProperty Name="House" Relationship="FindAHouseModel.FK_HouseFavourites_Houses" FromRole="HouseFavourite" ToRole="House" />
+    <NavigationProperty Name="User" Relationship="FindAHouseModel.FK_HouseFavourites_Users" FromRole="HouseFavourite" ToRole="User" />
+  </EntityType>
+  <EntityType Name="HouseOwner">
+    <Key>
+      <PropertyRef Name="houseOwnerID" />
+    </Key>
+    <Property Name="houseOwnerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="houseID" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="House" Relationship="FindAHouseModel.FK_HouseOwners_Houses" FromRole="HouseOwner" ToRole="House" />
+    <NavigationProperty Name="User" Relationship="FindAHouseModel.FK_HouseOwners_Users" FromRole="HouseOwner" ToRole="User" />
+  </EntityType>
+  <EntityType Name="House">
+    <Key>
+      <PropertyRef Name="houseID" />
+    </Key>
+    <Property Name="houseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="districtHouseIsLocated" Type="Int32" Nullable="false" />
+    <Property Name="locationWithInDistrict" Type="Int32" Nullable="false" />
+    <Property Name="bedrooms" Type="Int32" Nullable="false" />
+    <Property Name="masterBedroomEnsuite" Type="Boolean" Nullable="false" />
+    <Property Name="selfContained" Type="Boolean" Nullable="false" />
+    <Property Name="numberOfGarages" Type="Int32" />
+    <Property Name="fenceType" Type="Int32" Nullable="false" />
+    <Property Name="dateHouseWillBeAvailable" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="modeOfPayment" Type="Int32" Nullable="false" />
+    <Property Name="dateUploaded" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="currentHouseState" Type="Int32" Nullable="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="District" Relationship="FindAHouseModel.FK_Houses_Districts" FromRole="House" ToRole="District" />
+    <NavigationProperty Name="FenceType1" Relationship="FindAHouseModel.FK_Houses_FenceTypes" FromRole="House" ToRole="FenceType" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_Houses_FieldStates" FromRole="House" ToRole="FieldState" />
+    <NavigationProperty Name="HouseBookings" Relationship="FindAHouseModel.FK_HouseBookings_Houses" FromRole="House" ToRole="HouseBooking" />
+    <NavigationProperty Name="HouseContactDetail" Relationship="FindAHouseModel.FK_HouseContactDetails_Houses" FromRole="House" ToRole="HouseContactDetail" />
+    <NavigationProperty Name="HouseFavourites" Relationship="FindAHouseModel.FK_HouseFavourites_Houses" FromRole="House" ToRole="HouseFavourite" />
+    <NavigationProperty Name="HouseOwners" Relationship="FindAHouseModel.FK_HouseOwners_Houses" FromRole="House" ToRole="HouseOwner" />
+    <NavigationProperty Name="HouseState" Relationship="FindAHouseModel.FK_Houses_HouseStates" FromRole="House" ToRole="HouseState" />
+    <NavigationProperty Name="LocationsInDistrict" Relationship="FindAHouseModel.FK_Houses_LocationsInDistricts" FromRole="House" ToRole="LocationsInDistrict" />
+    <NavigationProperty Name="PaymentMode" Relationship="FindAHouseModel.FK_Houses_paymentModes" FromRole="House" ToRole="PaymentMode" />
+    <NavigationProperty Name="HouseUrls" Relationship="FindAHouseModel.FK_HouseUrls_HouseUrls" FromRole="House" ToRole="HouseUrl" />
+    <NavigationProperty Name="InterestedClients" Relationship="FindAHouseModel.FK_InterestedClients_Houses" FromRole="House" ToRole="InterestedClient" />
+  </EntityType>
+  <EntityType Name="HouseState">
+    <Key>
+      <PropertyRef Name="houseStateID" />
+    </Key>
+    <Property Name="houseStateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HouseStatus" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_HouseStates_FieldStates" FromRole="HouseState" ToRole="FieldState" />
+    <NavigationProperty Name="Houses" Relationship="FindAHouseModel.FK_Houses_HouseStates" FromRole="HouseState" ToRole="House" />
+  </EntityType>
+  <EntityType Name="HouseUrl">
+    <Key>
+      <PropertyRef Name="houseUrlID" />
+    </Key>
+    <Property Name="houseUrlID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="houseID" Type="Int32" Nullable="false" />
+    <Property Name="imageUrl" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_HouseUrls_FieldStates" FromRole="HouseUrl" ToRole="FieldState" />
+    <NavigationProperty Name="House" Relationship="FindAHouseModel.FK_HouseUrls_HouseUrls" FromRole="HouseUrl" ToRole="House" />
+  </EntityType>
+  <EntityType Name="InterestedClient">
+    <Key>
+      <PropertyRef Name="interestedClientID" />
+    </Key>
+    <Property Name="interestedClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="houseID" Type="Int32" Nullable="false" />
+    <Property Name="interestedClientState" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ClientState" Relationship="FindAHouseModel.FK_InterestedClients_ClientStates" FromRole="InterestedClient" ToRole="ClientState" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_InterestedClients_FieldStates" FromRole="InterestedClient" ToRole="FieldState" />
+    <NavigationProperty Name="House" Relationship="FindAHouseModel.FK_InterestedClients_Houses" FromRole="InterestedClient" ToRole="House" />
+    <NavigationProperty Name="User" Relationship="FindAHouseModel.FK_InterestedClients_Users" FromRole="InterestedClient" ToRole="User" />
+  </EntityType>
+  <EntityType Name="LocationsInDistrict">
+    <Key>
+      <PropertyRef Name="districtLocationID" />
+    </Key>
+    <Property Name="districtLocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="districtID" Type="Int32" Nullable="false" />
+    <Property Name="location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="District" Relationship="FindAHouseModel.FK_LocationsInDistricts_Districts" FromRole="LocationsInDistrict" ToRole="District" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_LocationsInDistricts_FieldStates" FromRole="LocationsInDistrict" ToRole="FieldState" />
+    <NavigationProperty Name="Houses" Relationship="FindAHouseModel.FK_Houses_LocationsInDistricts" FromRole="LocationsInDistrict" ToRole="House" />
+  </EntityType>
+  <EntityType Name="LoginSession">
+    <Key>
+      <PropertyRef Name="loginSessionID" />
+    </Key>
+    <Property Name="loginSessionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="SessionToken" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DateAndTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="User" Relationship="FindAHouseModel.FK_LoginSessions_Users" FromRole="LoginSession" ToRole="User" />
+  </EntityType>
+  <EntityType Name="PaymentMode">
+    <Key>
+      <PropertyRef Name="modeOfPaymentID" />
+    </Key>
+    <Property Name="modeOfPaymentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="number" Type="Int32" Nullable="false" />
+    <Property Name="duration" Type="Int32" Nullable="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="DurationType" Relationship="FindAHouseModel.FK_ModeOfPayment_DurationTypes" FromRole="PaymentMode" ToRole="DurationType" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_ModeOfPayment_FieldStates" FromRole="PaymentMode" ToRole="FieldState" />
+    <NavigationProperty Name="Houses" Relationship="FindAHouseModel.FK_Houses_paymentModes" FromRole="PaymentMode" ToRole="House" />
+  </EntityType>
+  <EntityType Name="SubscriptionType">
+    <Key>
+      <PropertyRef Name="subscriptionID" />
+    </Key>
+    <Property Name="subscriptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="durationNumber" Type="Int32" Nullable="false" />
+    <Property Name="duration" Type="Int32" Nullable="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="DurationType" Relationship="FindAHouseModel.FK_subscriptionTypes_DurationTypes" FromRole="SubscriptionType" ToRole="DurationType" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_subscriptionTypes_subscriptionTypes" FromRole="SubscriptionType" ToRole="FieldState" />
+    <NavigationProperty Name="Users" Relationship="FindAHouseModel.FK_Users_subscriptionTypes" FromRole="SubscriptionType" ToRole="User" />
+    <NavigationProperty Name="UserSubscriptions" Relationship="FindAHouseModel.FK_UserSubscriptions_SubscriptionTypes" FromRole="SubscriptionType" ToRole="UserSubscription" />
+  </EntityType>
+  <EntityType Name="UserPhoneNumber">
+    <Key>
+      <PropertyRef Name="userPhoneNumberID" />
+    </Key>
+    <Property Name="userPhoneNumberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="phoneNumber" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_UserPhoneNumbers_FieldStates" FromRole="UserPhoneNumber" ToRole="FieldState" />
+    <NavigationProperty Name="User" Relationship="FindAHouseModel.FK_UserPhoneNumbers_Users" FromRole="UserPhoneNumber" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="userRoleID" />
+    </Key>
+    <Property Name="userRoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="role" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_userRoles_FieldStates" FromRole="UserRole" ToRole="FieldState" />
+    <NavigationProperty Name="Users" Relationship="FindAHouseModel.FK_Users_userRoles" FromRole="UserRole" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="lastName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dateTimeCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="userType" Type="Int32" Nullable="false" />
+    <Property Name="userSubscriptionType" Type="Int32" Nullable="false" />
+    <Property Name="phoneNumber" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="passwordSalt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="accountState" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_Users_FieldStates" FromRole="User" ToRole="FieldState" />
+    <NavigationProperty Name="HouseBookings" Relationship="FindAHouseModel.FK_HouseBookings_Users" FromRole="User" ToRole="HouseBooking" />
+    <NavigationProperty Name="HouseFavourites" Relationship="FindAHouseModel.FK_HouseFavourites_Users" FromRole="User" ToRole="HouseFavourite" />
+    <NavigationProperty Name="HouseOwners" Relationship="FindAHouseModel.FK_HouseOwners_Users" FromRole="User" ToRole="HouseOwner" />
+    <NavigationProperty Name="InterestedClients" Relationship="FindAHouseModel.FK_InterestedClients_Users" FromRole="User" ToRole="InterestedClient" />
+    <NavigationProperty Name="LoginSessions" Relationship="FindAHouseModel.FK_LoginSessions_Users" FromRole="User" ToRole="LoginSession" />
+    <NavigationProperty Name="SubscriptionType" Relationship="FindAHouseModel.FK_Users_subscriptionTypes" FromRole="User" ToRole="SubscriptionType" />
+    <NavigationProperty Name="UserPhoneNumbers" Relationship="FindAHouseModel.FK_UserPhoneNumbers_Users" FromRole="User" ToRole="UserPhoneNumber" />
+    <NavigationProperty Name="UserRole" Relationship="FindAHouseModel.FK_Users_userRoles" FromRole="User" ToRole="UserRole" />
+    <NavigationProperty Name="UserSubscriptions" Relationship="FindAHouseModel.FK_UserSubscriptions_Users" FromRole="User" ToRole="UserSubscription" />
+  </EntityType>
+  <EntityType Name="UserSubscription">
+    <Key>
+      <PropertyRef Name="userSubscriptionID" />
+    </Key>
+    <Property Name="userSubscriptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="subcriptionType" Type="Int32" Nullable="false" />
+    <Property Name="startDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="endDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="FieldState" Relationship="FindAHouseModel.FK_UserSubscriptions_FieldStates" FromRole="UserSubscription" ToRole="FieldState" />
+    <NavigationProperty Name="SubscriptionType" Relationship="FindAHouseModel.FK_UserSubscriptions_SubscriptionTypes" FromRole="UserSubscription" ToRole="SubscriptionType" />
+    <NavigationProperty Name="User" Relationship="FindAHouseModel.FK_UserSubscriptions_Users" FromRole="UserSubscription" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_InterestedClients_ClientStates">
+    <End Type="FindAHouseModel.ClientState" Role="ClientState" Multiplicity="1" />
+    <End Type="FindAHouseModel.InterestedClient" Role="InterestedClient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientState">
+        <PropertyRef Name="stateID" />
+      </Principal>
+      <Dependent Role="InterestedClient">
+        <PropertyRef Name="interestedClientState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Districts_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.District" Role="District" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="District">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Houses_Districts">
+    <End Type="FindAHouseModel.District" Role="District" Multiplicity="1" />
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="districtID" />
+      </Principal>
+      <Dependent Role="House">
+        <PropertyRef Name="districtHouseIsLocated" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LocationsInDistricts_Districts">
+    <End Type="FindAHouseModel.District" Role="District" Multiplicity="1" />
+    <End Type="FindAHouseModel.LocationsInDistrict" Role="LocationsInDistrict" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="districtID" />
+      </Principal>
+      <Dependent Role="LocationsInDistrict">
+        <PropertyRef Name="districtID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DurationTypes_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.DurationType" Role="DurationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="DurationType">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModeOfPayment_DurationTypes">
+    <End Type="FindAHouseModel.DurationType" Role="DurationType" Multiplicity="1" />
+    <End Type="FindAHouseModel.PaymentMode" Role="PaymentMode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DurationType">
+        <PropertyRef Name="durationID" />
+      </Principal>
+      <Dependent Role="PaymentMode">
+        <PropertyRef Name="duration" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_subscriptionTypes_DurationTypes">
+    <End Type="FindAHouseModel.DurationType" Role="DurationType" Multiplicity="1" />
+    <End Type="FindAHouseModel.SubscriptionType" Role="SubscriptionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DurationType">
+        <PropertyRef Name="durationID" />
+      </Principal>
+      <Dependent Role="SubscriptionType">
+        <PropertyRef Name="duration" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FenceTypes_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.FenceType" Role="FenceType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="FenceType">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Houses_FenceTypes">
+    <End Type="FindAHouseModel.FenceType" Role="FenceType" Multiplicity="1" />
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FenceType">
+        <PropertyRef Name="fenceTypeID" />
+      </Principal>
+      <Dependent Role="House">
+        <PropertyRef Name="fenceType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseBookings_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseBooking" Role="HouseBooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="HouseBooking">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseContactDetails_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseContactDetail" Role="HouseContactDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="HouseContactDetail">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseFavourites_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseFavourite" Role="HouseFavourite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="HouseFavourite">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Houses_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="House">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseStates_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseState" Role="HouseState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="HouseState">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseUrls_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseUrl" Role="HouseUrl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="HouseUrl">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InterestedClients_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.InterestedClient" Role="InterestedClient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="InterestedClient">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LocationsInDistricts_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.LocationsInDistrict" Role="LocationsInDistrict" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="LocationsInDistrict">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModeOfPayment_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.PaymentMode" Role="PaymentMode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="PaymentMode">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_subscriptionTypes_subscriptionTypes">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.SubscriptionType" Role="SubscriptionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="SubscriptionType">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPhoneNumbers_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.UserPhoneNumber" Role="UserPhoneNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="UserPhoneNumber">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_userRoles_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.UserRole" Role="UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="accountState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSubscriptions_FieldStates">
+    <End Type="FindAHouseModel.FieldState" Role="FieldState" Multiplicity="1" />
+    <End Type="FindAHouseModel.UserSubscription" Role="UserSubscription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FieldState">
+        <PropertyRef Name="fieldStateID" />
+      </Principal>
+      <Dependent Role="UserSubscription">
+        <PropertyRef Name="state" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseBookings_Houses">
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseBooking" Role="HouseBooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="House">
+        <PropertyRef Name="houseID" />
+      </Principal>
+      <Dependent Role="HouseBooking">
+        <PropertyRef Name="houseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseBookings_Users">
+    <End Type="FindAHouseModel.User" Role="User" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseBooking" Role="HouseBooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="HouseBooking">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseContactDetails_Houses">
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseContactDetail" Role="HouseContactDetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="House">
+        <PropertyRef Name="houseID" />
+      </Principal>
+      <Dependent Role="HouseContactDetail">
+        <PropertyRef Name="houseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseFavourites_Houses">
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseFavourite" Role="HouseFavourite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="House">
+        <PropertyRef Name="houseID" />
+      </Principal>
+      <Dependent Role="HouseFavourite">
+        <PropertyRef Name="houseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseFavourites_Users">
+    <End Type="FindAHouseModel.User" Role="User" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseFavourite" Role="HouseFavourite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="HouseFavourite">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseOwners_Houses">
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseOwner" Role="HouseOwner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="House">
+        <PropertyRef Name="houseID" />
+      </Principal>
+      <Dependent Role="HouseOwner">
+        <PropertyRef Name="houseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseOwners_Users">
+    <End Type="FindAHouseModel.User" Role="User" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseOwner" Role="HouseOwner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="HouseOwner">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Houses_HouseStates">
+    <End Type="FindAHouseModel.HouseState" Role="HouseState" Multiplicity="1" />
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HouseState">
+        <PropertyRef Name="houseStateID" />
+      </Principal>
+      <Dependent Role="House">
+        <PropertyRef Name="currentHouseState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Houses_LocationsInDistricts">
+    <End Type="FindAHouseModel.LocationsInDistrict" Role="LocationsInDistrict" Multiplicity="1" />
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocationsInDistrict">
+        <PropertyRef Name="districtLocationID" />
+      </Principal>
+      <Dependent Role="House">
+        <PropertyRef Name="locationWithInDistrict" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Houses_paymentModes">
+    <End Type="FindAHouseModel.PaymentMode" Role="PaymentMode" Multiplicity="1" />
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMode">
+        <PropertyRef Name="modeOfPaymentID" />
+      </Principal>
+      <Dependent Role="House">
+        <PropertyRef Name="modeOfPayment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseUrls_HouseUrls">
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="1" />
+    <End Type="FindAHouseModel.HouseUrl" Role="HouseUrl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="House">
+        <PropertyRef Name="houseID" />
+      </Principal>
+      <Dependent Role="HouseUrl">
+        <PropertyRef Name="houseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InterestedClients_Houses">
+    <End Type="FindAHouseModel.House" Role="House" Multiplicity="1" />
+    <End Type="FindAHouseModel.InterestedClient" Role="InterestedClient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="House">
+        <PropertyRef Name="houseID" />
+      </Principal>
+      <Dependent Role="InterestedClient">
+        <PropertyRef Name="houseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InterestedClients_Users">
+    <End Type="FindAHouseModel.User" Role="User" Multiplicity="1" />
+    <End Type="FindAHouseModel.InterestedClient" Role="InterestedClient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="InterestedClient">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoginSessions_Users">
+    <End Type="FindAHouseModel.User" Role="User" Multiplicity="1" />
+    <End Type="FindAHouseModel.LoginSession" Role="LoginSession" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="LoginSession">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_subscriptionTypes">
+    <End Type="FindAHouseModel.SubscriptionType" Role="SubscriptionType" Multiplicity="1" />
+    <End Type="FindAHouseModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubscriptionType">
+        <PropertyRef Name="subscriptionID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="userSubscriptionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSubscriptions_SubscriptionTypes">
+    <End Type="FindAHouseModel.SubscriptionType" Role="SubscriptionType" Multiplicity="1" />
+    <End Type="FindAHouseModel.UserSubscription" Role="UserSubscription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubscriptionType">
+        <PropertyRef Name="subscriptionID" />
+      </Principal>
+      <Dependent Role="UserSubscription">
+        <PropertyRef Name="subcriptionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPhoneNumbers_Users">
+    <End Type="FindAHouseModel.User" Role="User" Multiplicity="1" />
+    <End Type="FindAHouseModel.UserPhoneNumber" Role="UserPhoneNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="UserPhoneNumber">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_userRoles">
+    <End Type="FindAHouseModel.UserRole" Role="UserRole" Multiplicity="1" />
+    <End Type="FindAHouseModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRole">
+        <PropertyRef Name="userRoleID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="userType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSubscriptions_Users">
+    <End Type="FindAHouseModel.User" Role="User" Multiplicity="1" />
+    <End Type="FindAHouseModel.UserSubscription" Role="UserSubscription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="UserSubscription">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
