@@ -1,0 +1,6 @@
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleAppClient\TipezeNyumbaConsoleAppClient\bin\Debug\TipezeNyumbaConsoleAppClient.exe.config
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleAppClient\TipezeNyumbaConsoleAppClient\bin\Debug\TipezeNyumbaConsoleAppClient.exe
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleAppClient\TipezeNyumbaConsoleAppClient\bin\Debug\TipezeNyumbaConsoleAppClient.pdb
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleAppClient\TipezeNyumbaConsoleAppClient\obj\Debug\TipezeNyumbaConsoleAppClient.exe
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleAppClient\TipezeNyumbaConsoleAppClient\obj\Debug\TipezeNyumbaConsoleAppClient.pdb
+C:\Users\kmatiya\Documents\Visual Studio 2017\Projects\TipezeNyumbaConsoleAppClient\TipezeNyumbaConsoleAppClient\obj\Debug\TipezeNyumbaConsoleAppClient.csprojResolveAssemblyReference.cache

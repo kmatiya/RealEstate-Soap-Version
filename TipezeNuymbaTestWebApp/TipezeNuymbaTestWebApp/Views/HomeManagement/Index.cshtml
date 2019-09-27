@@ -1,0 +1,131 @@
+﻿@model IEnumerable<TipezeNuymbaTestWebApp.Models.HouseModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<br />
+<p class="text-danger">@ViewBag.Message</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.houseID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bedrooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.masterBedroomEnsuite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.selfContained)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numberOfGarages)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.districtHouseIsLocated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateHouseWillBeAvailable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateUploaded)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modeOfPayment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.houseState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fenceType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phoneNumber1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phoneNumber2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.whatsAppContactNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.houseID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bedrooms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.masterBedroomEnsuite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.selfContained)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numberOfGarages)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.districtHouseIsLocated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateHouseWillBeAvailable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateUploaded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modeOfPayment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.houseState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fenceType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phoneNumber1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phoneNumber2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.whatsAppContactNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.houseID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.houseID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.houseID })
+        </td>
+    </tr>
+}
+
+</table>
